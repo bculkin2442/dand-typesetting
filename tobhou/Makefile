@@ -3,7 +3,7 @@
 %.ms: $(wildcard ../macros/*.tmac)
 
 %.ps: %.ms
-	groff -Tps -ms $< > $@
+	groff -Tps -ms $< > $@ 2> $@.sum
 
 %.pdf: %.ps
 	pstopdf $< -o $@
