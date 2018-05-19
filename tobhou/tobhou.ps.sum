@@ -1,0 +1,33 @@
+Race: Lunarian			 ... 2
+Type: Humanoid			 ... 2
+Ability Score Adjustment: -2 Str, +2 Cha			 ... 2
+Size: Medium			 ... 2
+Speed: 30ft			 ... 3
+Racial Trait: Human Heritage			 ... 3
+Racial Trait: Pure Being			 ... 3
+Racial Trait: Ahead of You			 ... 3
+Race: White Wolf Tengu			 ... 4
+Type: Humaniod			 ... 4
+Ability Score Adjustment: -2 Int, +2 Wis			 ... 5
+Size: Medium			 ... 5
+Speed: 30ft			 ... 5
+Racial Trait: Scent			 ... 5
+Racial Trait: God's Watch Dog			 ... 5
+Race: Fairies			 ... 5
+Type: Fey			 ... 6
+Size: Small/Medium			 ... 6
+Speed: 20ft			 ... 6
+Ability Score Adjustment: -2 Str, +2 Dex, -2 Int, +2 Cha / -2 Dex, +2 Con, -2 Int, +2 Wis			 ... 6
+Racial Trait: Weak Wings			 ... 6
+Racial Trait: Ephemereal Eternity			 ... 6
+Racial Trait: Element			 ... 6
+Racial Trait: Danmaku Mook			 ... 6
+Feat: Good Fortune			 ... 8
+Prerequisite: Pure Being racial feature			 ... 8
+Benefit: You never face any minor, mundane trouble in life			 ... 8
+Feat: Linking the Sea and the Mountains			 ... 10
+Prerequisite: Pure Being racial feature			 ... 10
+Benefit: You can teleport instead of walking			 ... 10
+Prerequisite: Fairy base race			 ... 11
+Benefit: Bond to a plant and create a living space inside it			 ... 11
+feats.ms:190: warning: macro `RE'' not defined (probably missing space after `RE')

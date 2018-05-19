@@ -64,18 +64,26 @@
 \# Bolded keyed paragraph
 \# 	Argument #1: Paragraph key
 .de KP
-.IP "\fB\\$1\fP"
+.IP "\fB\s+4\\$1\s-4\fP"
+..
+
+\# Diminutive bolded keyed paragraph
+\# 	Argument #1: Paragraph key
+.de DKP
+.IP "\fB\s+2\\$1\s-2\fP"
 ..
 \# Figure registers
 .nr FNUM 0 1
 
 \# Figure macros
+
+\# Print a figure caption
 .de FCAP
 .ce 1
 \f(BIFigure \n+[FNUM]: \\$1\fP
 ..
 
-\# A Full Figure
+\# A full Figure
 \# 	Argument #1: Image file
 \#	Argument #2: Image caption
 .de FIGURE
@@ -83,4 +91,19 @@
 .	PSPIC "\\$1"
 .	FCAP "\\$2"
 .	DE
+..
+
+\# A non-captioned Figure
+\# 	Argument #1: Image file
+.de NCFIGURE
+.	DS
+.	PSPIC "\\$1"
+.	DE
+..
+
+\# Text formatting macros
+
+\# Typeset a spell name
+.de SPL
+.I "\\$1" "''" "``"
 ..

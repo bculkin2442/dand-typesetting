@@ -1,0 +1,32 @@
+\# Start a feat summary
+\# 	Argument #1: The feat name
+.de Feat
+.	IX "Feat: \\$1"
+..
+
+\# Print a feat summary text
+\# 	Argument #1: Summary section
+\#	Argument #2: Summary text
+.de FText
+.	IX "\t\\$1: \\$2"
+..
+
+\# Print a feat prerequisite
+\# 	Argument #1: The feat prerequisite
+.de FPrereq
+.	FText "Prerequisite" "\\$1"
+..
+
+\# Print a feat prerequisite and typeset it
+\# 	Argument #1: The feat prerequisite
+.de TFPrereq
+.	FText "Prerequisite" "\\$1"
+.	DKP "Prerequisite"
+	\\$1
+..
+
+\# Print a feat short-description
+\# 	Argument #1: The feat short-description
+.de FBenefit
+.	FText "Benefit" "\\$1"
+..
