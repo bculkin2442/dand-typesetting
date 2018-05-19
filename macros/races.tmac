@@ -1,0 +1,40 @@
+\# Insert here the 'summary' macros for allowing the automated creation of race
+\# 	indexes and summaries. Essentially, this should include things like
+\#	types and subtypes, ability score increases, size, speed, feature names
+\#	and LA/HD
+
+\# Start a race summary
+\#	Argument #1: Race Name
+.de Race
+.	IX "Race: \\$1"
+..
+
+\# Print text as part of a race summary
+\# 	Argument #1: Summary section
+\#	Argument #2: Summary text
+.de RText
+.	IX "\t\\$1: \\$2"
+..
+
+\# Print a races type
+\# 	Argument #1: Race type
+.de RType
+.	RText "Type" "\\$1"
+..
+
+\# Print a races ability score adjustments
+\# 	Argument #1: Racial adjustment text
+.de RAbility
+.	RText "Ability Score Adjustment" "\\$1"
+..
+
+\# Print a racial trait
+.de RTrait
+.	RText "Racial Trait" "\\$1"
+..
+
+\# Print a racial trait and start it
+.de PRTrait
+.	RTrait "\\$1"
+.	KP "\\$1"
+..

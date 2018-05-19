@@ -1,0 +1,86 @@
+\# Load dependant macros
+.so ../macros/races.tmac
+.so ../macros/feats.tmac
+
+\# Document settings
+
+\# Twelve-point type
+.nr ps 12
+
+\# Number pages after title page
+.P1
+\# Date in footers
+.DA
+\# No date on title page
+.ND ""
+
+\# Document macros
+
+\# Load external section
+\# 	Argument 1: Section name
+\#	Argument 2: Section file
+.de XSH
+.	SH 1
+.	ce 1
+	\s+(12\\$1\s-(12
+.	RS
+.	XS
+.	B "\\*[SN-DOT] \\$1"
+.	XE
+.	so \\$2
+.	RE
+.	bp
+..
+
+\# Subsection header
+\#	Argument #1: Subsection name
+.de SSH
+.	SH 2
+	\s+8\\$1\s-8
+.	RS
+.	XS
+.	B "\t\\*[SN-DOT] \\$1"
+.	XE
+..
+
+\# Subsection footer
+.de SSF
+.	RE
+..
+
+\# 'Supersection' (Level III section) header
+\#	Argument #1: Subsection name
+.de SuSH
+.	SH 3
+	\s+6\\$1\s-6
+.	RS
+..
+
+\# 'Supersection' (Level III section) header
+.de SuSF
+.RE
+..
+
+\# Bolded keyed paragraph
+\# 	Argument #1: Paragraph key
+.de KP
+.IP "\fB\\$1\fP"
+..
+\# Figure registers
+.nr FNUM 0 1
+
+\# Figure macros
+.de FCAP
+.ce 1
+\f(BIFigure \n+[FNUM]: \\$1\fP
+..
+
+\# A Full Figure
+\# 	Argument #1: Image file
+\#	Argument #2: Image caption
+.de FIGURE
+.	DS
+.	PSPIC "\\$1"
+.	FCAP "\\$2"
+.	DE
+..
